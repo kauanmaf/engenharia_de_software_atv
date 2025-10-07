@@ -17,7 +17,16 @@ csv_adap = CSVAdapter(csv_path)
 json_adap = APIAdapter(json_path)
 string_data = ObjectAdapter(outsource_data)
 
-x = DataIterator(csv_adap,json_adap, string_data)
 
-for element in range(15):
-    print(next(x))
+total = []
+
+for adapter in [csv_adap, json_adap, string_data]:
+    # Se estiver tudo certo, pegamos os dados, jogamos num df e retornamos
+    df_dict = adapter.get_data()
+    df = pd.DataFrame(df_dict)
+    total.extend(df.to_dict(orient="records"))
+
+iterator = DataIterator(total)
+
+for element in range(len(total)):
+    print(next(iterator))

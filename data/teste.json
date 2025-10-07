@@ -1,0 +1,8 @@
+{
+  "funcionarios": [
+    {"id": 10, "nome": "Fábio Martins", "cargo": "Cientista de Dados", "salario": 10500},
+    {"id": 11, "nome": "Gabriela Nunes", "cargo": "DevOps", "salario": 8800},
+    {"id": 12, "nome": "Henrique Lopes", "cargo": "Engenheiro de Software", "salario": 9300},
+    {"id": 13, "nome": "Isabela Ferreira", "cargo": "Product Owner", "salario": 9700}
+  ]
+}
